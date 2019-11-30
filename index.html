@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Melody's Personal Website">
+    <meta name="keywords" content="HTML,CSS">
+    <meta name="author" content="Melody Chou">
+    <title>Melody Chou</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+</head>
+
+<body>
+	<!--Main content-->
+	<main class="content">
+		<div class="cover">
+			<div class="topnav">
+				<h1><a id ="name" href="#"></a>MELODY CHOU</h1>
+				<ul>
+					<li id="nav-item">
+						<a id="home-link" class="active" href="#">HOME</a>
+					</li>
+					<li id="nav-item">
+						<a id="projects-link" href="#/" >PROJECTS</a>
+					</li>
+					<li id="nav-item">
+						<a id="resume-link" target="_blank" href="https://www.dropbox.com/s/jiq3aold0a0peny/Melody%20Resume.pdf?dl=0">RESUME</a>
+					</li>
+					<li id="nav-item">
+						<a id="contact-link" href="#/">CONTACT</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="banner">
+				<h1>WELCOME</h1>
+				<h2>to my website</h2>
+				<p>View Projects Below</p>
+				<a id="scroll">&#65086;</a>			
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="about">
+				<h2>About Me</h2>
+				<div class="text-wrap"> 
+					<p>I am currently a third-year undergraduate student at University of Washington majoring in Informatics with a concentration
+						in Data Science. Some of my interests include web devlopment, data science, database systems, and software development. 
+						Find out more about the ongoing or completed projects that I have worked on in the section below.
+					</p>
+				</div>
+				<div class="icons">
+					<i class="fas fa-laptop-code"></i>
+					<i class="fas fa-database"></i>
+					<i class="far fa-chart-bar"></i>
+					<i class="fas fa-code-branch"></i>
+				</div>
+			</div>
+			
+			<hr>
+
+			<div id="scroll-to" class="projects">
+				<h2>Projects</h2>
+				<div class="text-wrap"> 
+				<p>These are some of the notable projects that I have worked on as an undergraduate student.
+					</p>
+				</div>
+
+				<div class="cards">
+					<div class="card one">
+						<img src="./img/lightop.png">
+						<h3>LIGHTOP FITNESS TRACKER</h3>
+						<p>Together with a partner, we designed a free and easy-to-use web application that provides people with
+							a personalized fitness and meal plan based on their personal profile. 
+						</p>
+						<a href="https://project-liz19981001.firebaseapp.com/" target="_blank">View Web App</a>
+						<div class="links">
+							<ul class="technologies">
+								<li id="tech-item">HTML</li>
+								<li id="tech-item">CSS</li>
+								<li id="tech-item">Javascript</li>
+								<li id="tech-item">JSQuery</li>
+								<li id="tech-item">ReactJS</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card two">
+						<img src="./img/spotify.png">
+						<h3>Audio Analysis of the Global Top 50 Songs on Spotify</h3>
+						<p>With a 3 other group members, I built a RShiny Application based on data from the Spotify API
+							that analyzes the Global Top 50 Songs based on information such as danceability, valence, 
+							energy, and tempo.
+						</p>
+						<a href="https://pranay99.shinyapps.io/info201/" target="_blank">View Web App</a>
+						<div class="links">
+							<ul class="technologies">
+								<li id="tech-item">R</li>
+								<li id="tech-item">RShiny</li>
+								<li id="tech-item">Markdown</li>
+								<li id="tech-item">Spotify API</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="external">
+			<ul>
+				<li><a href="https://github.com/melodc" target="_blank"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/melodychou0905/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="mailto:melodc@uw.edu" target="_blank"><i class="fas fa-at"></i></a></li>
+			</ul>
+		</div>
+
+		<div class="form">
+			<h2>Get in touch</h2>
+			<form name="form"  class="form-group" onsubmit="return validateForm()" action='action.php' oethod="POST">
+				<div class="form-row">
+					<label for="name">Name</label>
+					<input name="name" class="form-control name" required="" id="name">
+				</div>
+				<div class="form-row">
+					<label for="email">Email</label>
+					<input type="email" name="email" class="form-control email" required="" id="email">
+				</div>
+				<div class="form-row">
+					<label for="message">Message</label>
+					<textarea name="message" class="form-control message" rows="5" id="message" required=""></textarea>
+				</div>
+				<div class="form-row">
+					<button type="submit" class="btn btn-primary">Send</button>
+				</div>
+			</form>
+		</div>
+		<div class='copyright'>&copy; 2019 Melody Chou All Rights Reserved</div>
+	</footer>
+
+	<script src="js/index.js"></script>
+</body>
+</html>
