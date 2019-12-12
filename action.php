@@ -11,10 +11,11 @@
     // Instantiation and passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
+	$result="";
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
         $mail->isSMTP();                                            // Send using SMTP
         $mail->SMTPSecure = 'ssl';                                  //secure transfer enabled
         $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
@@ -24,13 +25,17 @@
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
         $mail->Port       = 587;                                    // TCP port to connect to
 
+        $errors="";
         if(empty($_POST['name'])  || empty($_POST['email']) || empty($_POST['message'])){
             $errors .= "\n Error: all fields are required";
         }
 
+        //Initializing variable
         $name = $_POST['name'];
         $email_address = $_POST['email'];
-        $message = $_POST['message'];
+        $message= $_POST['message'];
+
+
         if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
             $email_address)) {
             $errors .= "\n Error: Invalid email address";
@@ -53,7 +58,14 @@
             $mail->Body    = $email_body;
 
             $mail->send();
-            echo 'Message has been sent';
+            
+            // header("Location: /#contact");
+
+            echo "<script type='text/javascript'>
+            alert('Message sent sucessfully.');
+            window.location.href='/#contact';
+            </script>";
+
         }
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

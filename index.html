@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-	<script data-ad-client="ca-pub-9277814683020976" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<link rel="icon" href="data:;base64,=">
 </head>
 
 <body>
@@ -112,7 +111,7 @@
 			</div>
 		</div>
 	</main>
-
+	
 	<footer class="footer">
 		<div class="external">
 			<ul>
@@ -122,9 +121,9 @@
 			</ul>
 		</div>
 
-		<div class="form">
+		<div class="form" id="contact">
 			<h2>Get in touch</h2>
-			<form name="form"  class="form-group" action='action.php' method="POST">
+			<form name="form" class="form-group" action="action.php" method="POST">
 				<div class="form-row">
 					<label for="name">Name</label>
 					<input name="name" class="form-control name" required="" id="name">
@@ -137,15 +136,19 @@
 					<label for="message">Message</label>
 					<textarea name="message" class="form-control message" rows="5" id="message" required=""></textarea>
 				</div>
-
+				<div><p id='final-message'></p></div>
 				<div class="form-row">
-					<button type="submit" class="btn btn-primary">Send</button>
+					<button type="submit" name="submit" class="btn btn-primary" onclick="return validateForm();">Send</button>
 				</div>
 			</form>
+
 		</div>
 		<div class='copyright'>&copy; 2019 Melody Chou All Rights Reserved</div>
 	</footer>
 
 	<script src="js/index.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    
 </body>
+
 </html>
