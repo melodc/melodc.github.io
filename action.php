@@ -61,10 +61,10 @@
             
             header("Location: /#contact");
 
-            echo "<script type='text/javascript'>
-            alert('Message sent sucessfully.');
-            window.location.href='/#contact';
-            </script>";
+            // echo "<script type='text/javascript'>
+            // alert('Message sent sucessfully.');
+            // window.location.href='/#contact';
+            // </script>";
 
         }
     } catch (Exception $e) {
