@@ -6,8 +6,6 @@ body {
     width: inherit;
     top: 0px;
     margin: 0;
-    overflow-y:auto;
-    overflow-x:hidden;
 }
 
 .content-section {
@@ -99,9 +97,9 @@ html {
     flex-direction: column;
     justify-content: space-between;
     flex: 1 0;
-    align-self: flex-end;
     position: absolute;
     bottom: 0px;
+    left: 18%;
 }
 
 
@@ -124,6 +122,7 @@ html {
     font-weight: lighter;
     width: 100%;
     height: 100%;
+    margin-bottom: 50vh;
 }
 
 .banner p {
@@ -137,7 +136,7 @@ html {
     background-color: rgb(0,0,0,0);
     color: white;
     border: none;
-    font-size: 10vw;
+    font-size: 10vh;
     font-weight: lighter;
     opacity: 0;
     animation-name: topFadeOut;
@@ -346,6 +345,16 @@ footer {
     color: grey;
     padding: 30px;
     font-size: 2.5vh;
+}
+
+@media (min-width:750px) {
+    .banner {
+        left: 22%;
+    }
+
+    .banner h2 {
+        margin-bottom: 10vh;
+    }
 }
 
 @media (min-width:992px) {
