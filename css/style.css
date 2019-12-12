@@ -350,6 +350,7 @@ footer {
 @media (min-width:750px) {
     .banner {
         left: 22%;
+        bottom: 0;
     }
 
     .banner h2 {
