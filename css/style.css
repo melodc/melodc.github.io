@@ -35,6 +35,7 @@ html {
     animation: fadein 2s;
     display: block;
     height: 100vh;
+    position: relative;
 }
 
 @keyframes fadein {
@@ -99,6 +100,8 @@ html {
     justify-content: space-between;
     flex: 1 0;
     align-self: flex-end;
+    position: absolute;
+    bottom: 0px;
 }
 
 
