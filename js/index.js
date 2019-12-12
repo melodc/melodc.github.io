@@ -43,7 +43,3 @@ function validateForm() {
   return false;
 }
 
-/*
-<div class="final-message">
-					<?php echo $result ?>
-				</div>*/
