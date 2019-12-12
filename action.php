@@ -16,10 +16,11 @@
         //Server settings
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
         $mail->isSMTP();                                            // Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+        $mail->SMTPSecure = 'ssl';                                  //secure transfer enabled
+        $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = 'mymelody905@gmail.com';                     // SMTP username
-        $mail->Password   = 'my_melodyc123';                               // SMTP password
+        $mail->Username   = 'mymelody905@gmail.com';                // SMTP username
+        $mail->Password   = 'blueboice0905';                        // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
         $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -36,7 +37,6 @@
         }
 
         if( empty($errors)) {
-            $to = $myemail;
             $email_subject = "Contact form submission: $name";
             $email_body = "You have received a new message. ".
             " Here are the details:\n Name: $name \n ".
@@ -46,10 +46,6 @@
             $mail->setFrom($email_address, $name);
             $mail->addAddress('mymelody905@gmail.com');     // Add a recipient
             $mail->addReplyTo($email_address, $name);
-
-            // Attachments
-            $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-            $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
             // Content
             $mail->isHTML(true);                                  // Set email format to HTML
