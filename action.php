@@ -1,4 +1,8 @@
 <?php
+    error_reporting(-1);
+    ini_set('display_errors', 'On');
+    set_error_handler("var_dump");
+    
     $errors = '';
     $myemail = 'kohoxa9178@mailt.net';//<-----Put Your email address here.
     if(empty($_POST['name'])  ||
