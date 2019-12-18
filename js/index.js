@@ -16,3 +16,6 @@ document.getElementById('contact-link').addEventListener('click', function() {
   behavior: 'smooth' 
 });
 });
+
+var element = document.getElementById("counter");
+  element.classList.remove(" badge-done0");
