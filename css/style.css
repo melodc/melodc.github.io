@@ -27,7 +27,7 @@ html {
 
 .cover {
     margin: 0;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url('../img/IMG_3514.jpg');
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url('../img/IMG_3514_scaled.png');
     background-size: 100% 100vh, cover;
     background-repeat: no-repeat;   
     animation: fadein 2s;
